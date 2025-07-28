@@ -58,11 +58,11 @@ nav {
   display: flex;
   justify-content: center;
   padding: 1.25rem;
-  color: var(--branco);
+  color: var(--verde-escuro);
   font-size: 24px;
+  font-family: 'Sora';
 }
 
-/* --- SEÇÃO SERVIÇOS --- */
 .servicos {
   background-image: url(../assets/raioCamada2.svg);
   background-position: center;
@@ -87,6 +87,9 @@ nav {
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  color: var(--verde-claro);
+  font-family: 'Sora';
+  font-size: 48px;
 }
 
 .grid-servicos {
@@ -98,7 +101,12 @@ nav {
 }
 
 .item-servico {
+  display: flex;
+  flex-direction: column;
+  
   text-align: left;
+  font-family: 'Sora';
+  font-size: 24px;
 }
 
 .item-servico h4 {
@@ -115,6 +123,8 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: 6.25rem;
+  font-family: 'Sora';
+  font-weight: bold;
 }
 
 .ver-mais {
@@ -159,9 +169,10 @@ nav {
 
 .faq h2 {
   font-size: 2.5rem;
-  color: var(--verde-escuro-2); 
+  color: var(--branco); 
   margin-bottom: 3rem;
   margin-top: 2.5rem;
+  font-family: 'Sora';
 }
 
 .cards-container {
@@ -172,6 +183,7 @@ nav {
   flex-wrap: wrap;
   margin-bottom: 5rem;
   margin-top: 8rem;
+  font-family: 'Sora';
 }
 
 .card {
