@@ -1,0 +1,38 @@
+.parceiros-container {
+  max-width: 1440px; 
+  margin: 0 auto 4rem auto; 
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.parceiros-scroll {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 60px;
+  animation: scroll 40s linear infinite;
+  padding: 30px;
+}
+
+.parceiros-scroll img {
+  height: 35px;
+  width: auto;
+  filter: grayscale(100%) opacity(75%);
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.parceiros-scroll img:hover {
+  transform: scale(1.2); 
+  filter: grayscale(0%) opacity(100%); 
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

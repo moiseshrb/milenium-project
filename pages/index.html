@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="../styles/colors.css">
   <link rel="stylesheet" href="../styles/reset.css">
   <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/navigation.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="shortcut icon" href="../assets/icons/LOGO (1).svg" type="image/x-icon">
 </head>
@@ -16,6 +19,18 @@
     <nav>
       <img src="../assets/logos/logotipoMilenium.svg" alt="Logotipo da Milenium">
     </nav>
+    
+    <!-- Navegação superior sobreposta -->
+    <div class="nav-superior">
+      <button class="menu-mobile" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#fornecedores">Fornecedores</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
   </header>
 
   <main> 
@@ -40,7 +55,7 @@
       <p>Seu projeto merece uma <b>instalação com qualidade!</b></p>
     </div>
 
-    <section class="servicos">
+    <section class="servicos" id="servicos">
 
       <div class="container-svg">
         <img src="../assets/icons/setaBaixo.svg" alt="Ícone de uma seta apontando para baixo" class="svgSeta"> 
@@ -133,7 +148,7 @@
 </section>
   </main>
 
-  <footer>
+  <footer id="contato">
     <img src="../assets/logos/logotipoMilenium2.svg" alt="">
 
     <div class="whatsapp">
@@ -141,13 +156,11 @@
       <p>+55 (71) 99243-1251 - Wallace Silva</p>
     </div>
 
-
     <div class="whatsapp">
       <img src="../assets/icons/icon-whatsapp.svg" alt="">
       <p>+55 (71) 98168-5148 - Deivison Santana</p>
     </div>
     
-
     <div class="email">
       <img src="../assets/icons/icon-email.svg" alt="">
       <p>engenharia@mileniumquadros.com.br</p>
@@ -162,12 +175,38 @@
       <img src="../assets/icons/icon-instagram.svg" alt="">
     </a>
 
-    
-    
-
     <div class="footer-direitos-autorais">&copy; Millenium 2024. Todos os direitos reservados.</div>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
+    // Fechar menu ao clicar em um link (mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+      });
+    });
+
+    // Scroll suave para as seções
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+          targetSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
