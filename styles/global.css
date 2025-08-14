@@ -67,7 +67,8 @@ nav {
   background-image: url(../assets/raioCamada2.svg);
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 0.8rem;
+  background-size: cover;
+  padding-top: 1.3rem;
   padding-bottom: 6rem;
 }
 
@@ -75,11 +76,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+}  
 
-.svgSeta {
-  width: 60px;
-}
+
 
 .textoServico {
   display: flex;
@@ -294,35 +293,38 @@ header {
   background-color: var(--bege);
   position: relative;
   z-index: 10;
+  padding: 3rem;
 }
 
 /* Navegação superior sobreposta */
 .nav-superior {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(245, 241, 232, 0.95);
+  left: 50%;
+  width: 60%;
+  background-color: #F8F7F3;
   backdrop-filter: blur(5px);
   z-index: 15;
   padding: 1rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(100%); /* Move para fora do header, sobrepondo a imagem */
+  transform: translateX(-50%) translateY(55%); /* Move para fora do header, sobrepondo a imagem */
+  border-radius: 1.5rem;
 }
 
 .nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .nav-links a {
-  color: var(--verde-escuro);
+  color: var(--verde-claro);
   text-decoration: none;
+  font-family: 'Sora';
   font-weight: 500;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -332,7 +334,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: var(--verde-claro);
+  color: var(--verde-escuro);
   background-color: rgba(124, 179, 66, 0.1);
 }
 
@@ -344,7 +346,7 @@ header {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: var(--verde-claro);
+  background-color: var(--verde-escuro);
   transition: width 0.3s ease;
 }
 
@@ -385,8 +387,6 @@ header {
   gap: 30px;
   max-width: 40%;
 }
-
-/* ========== RESPONSIVIDADE ========== */
 
 @media (max-width: 768px) {
   .nav-links {
