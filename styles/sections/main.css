@@ -1,0 +1,118 @@
+.backgroundInicial {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imgFundo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.camadaVerde {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  
+}
+
+.textos {
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  left: 5%;
+  color: var(--branco);
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 40%;
+}
+
+.textos-1 {
+  font-family: 'Sora';
+  font-weight: 700;
+}
+
+.textos-2 {
+  font-family: 'Sora';
+  font-weight: 400;
+}
+
+.faixaMarketing {
+  background-color: var(--verde-claro);
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+  color: var(--verde-escuro);
+  font-size: 24px;
+  font-family: 'Sora';
+}
+
+.servicos {
+  background-image: url(../assets/raioCamada2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1.3rem;
+  padding-bottom: 6rem;
+}
+
+.container-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+
+
+
+.textoServico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  color: var(--verde-claro);
+  font-family: 'Sora';
+  font-size: 48px;
+}
+
+.grid-servicos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.item-servico {
+  display: flex;
+  flex-direction: column;
+  
+  text-align: left;
+  font-family: 'Sora';
+  font-size: 24px;
+}
+
+.item-servico h4 {
+  margin-bottom: 2px;
+  color: var(--verde-escuro-2);
+}
+
+.item-servico p {
+  line-height: 1.5;
+  color: var(--verde-escuro);
+}
+
+.botao-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 6.25rem;
+  font-family: 'Sora';
+  font-weight: bold;
+}

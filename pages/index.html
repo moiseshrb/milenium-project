@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Milenium - Soluções em Painéis Elétricos</title>
-  <link rel="stylesheet" href="../styles/colors.css">
-  <link rel="stylesheet" href="../styles/reset.css">
-  <link rel="stylesheet" href="../styles/fonts.css">
-  <link rel="stylesheet" href="../styles/navigation.css">
+  
+  <link rel="stylesheet" href="../styles/extras/colors.css">
+  <link rel="stylesheet" href="../styles/extras/fonts.css">
+  <link rel="stylesheet" href="../styles/extras/reset.css">
+  <link rel="stylesheet" href="../styles/extras/responsive.css">
+
+  <link rel="stylesheet" href="../styles/sections/main.css">
+  <link rel="stylesheet" href="../styles/sections/section2.css">
+  <link rel="stylesheet" href="../styles/sections/navigation.css">
+
   <link rel="stylesheet" href="../styles/layout.css">
-  <link rel="stylesheet" href="../styles/responsive.css">
   <link rel="stylesheet" href="../styles/global.css">
+
   <link rel="shortcut icon" href="../assets/icons/LOGO (1).svg" type="image/x-icon">
 </head>
 <body>
@@ -20,7 +26,6 @@
       <img src="../assets/logos/logotipoMilenium.svg" alt="Logotipo da Milenium">
     </nav>
     
-    <!-- Navegação superior sobreposta -->
     <div class="nav-superior">
       <button class="menu-mobile" onclick="toggleMenu()">☰</button>
       <div class="nav-links" id="navLinks">
@@ -34,7 +39,7 @@
   </header>
 
   <main> 
-    <div class="primeiraParte">
+    <div class="backgroundInicial">
       <img src="../assets/backgroundImages/foto1.png" alt="" class="imgFundo">
       <div class="camadaVerde">
         <div class="textos">
@@ -183,15 +188,12 @@
       const navLinks = document.getElementById('navLinks');
       navLinks.classList.toggle('active');
     }
-
-    // Fechar menu ao clicar em um link (mobile)
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('navLinks').classList.remove('active');
       });
     });
 
-    // Scroll suave para as seções
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
