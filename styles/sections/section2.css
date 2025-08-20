@@ -1,8 +1,9 @@
 .faq {
   background-color: var(--verde-claro);
-  background-image: url(../assets/raioCamada3.svg);
+  background-image: url('../../assets/raioCamada3.svg');
   background-repeat: no-repeat;
-  background-position: left 100px top;
+  background-size: 100% auto;
+  background-position: right 30%;
   padding: 6rem 2rem;
   text-align: center;
 }
