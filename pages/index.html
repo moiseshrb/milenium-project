@@ -30,10 +30,10 @@
     <div class="nav-superior">
       <button class="menu-mobile" onclick="toggleMenu()">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#sobre">Sobre</a>
+        <a href="#textos-1">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#produtos">Produtos</a>
-        <a href="#fornecedores">Fornecedores</a>
+        <a href="#faq">Fornecedores</a>
         <a href="#contato">Contato</a>
       </div>
     </div>
@@ -44,7 +44,7 @@
       <img src="../assets/backgroundImages/foto1.png" alt="" class="imgFundo">
       <div class="camadaVerde">
         <div class="textos">
-          <h1 class="textos-1">Conectando hoje, energizando o amanhã!</h1>
+          <h1 class="textos-1" id="textos-1">Conectando hoje, energizando o amanhã!</h1>
           <p class="textos-2">
             Somos uma empresa referência em painéis e quadros elétricos para empresas, hospitais, escolas e outros segmentos que exigem confiabilidade total.
             Atuamos com foco em excelência, segurança e inovação — entregando sistemas elétricos de alta performance que superam expectativas.
@@ -104,7 +104,7 @@
       
     </section>
 
-    <section class="faq">
+    <section class="faq" id="faq">
   
       <h2>Perguntas frequentes</h2>
 
@@ -182,12 +182,13 @@
           <img src="../assets/icons/icon-location.svg" alt="Localização">
           <p>Estrada Bahia feira nº58 km 9, Pirajá</p>
         </div>
+
+        <a href="https://www.instagram.com/mileniumquadros?igsh=c3Q0bzRodWplZTcw" target="_blank" class="instagram-logo">
+          <img src="../assets/icons/icon-instagram.svg" alt="Instagram Milenium">
+        </a>
       </div>
 
-      <!-- Link do Instagram -->
-      <a href="https://www.instagram.com/mileniumquadros?igsh=c3Q0bzRodWplZTcw" target="_blank" class="instagram-logo">
-        <img src="../assets/icons/icon-instagram.svg" alt="Instagram Milenium">
-      </a>
+      
 
       <!-- Direitos autorais -->
       <div class="footer-direitos-autorais">
@@ -197,31 +198,43 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
-    }
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('active');
-      });
-    });
+  // --- Função para o Menu Mobile ---
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-          targetSection.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
+  // Fecha o menu mobile ao clicar em um link (para telas menores)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
     });
-  </script>
+  });
+
+  // --- Função de Rolagem Suave para TODOS os links âncora ---
+  // Este novo código seleciona qualquer link que comece com '#'
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      // 1. Previne o comportamento padrão de "pular" para a âncora
+      e.preventDefault();
+
+      // 2. Pega o ID da seção de destino (ex: '#servicos')
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+
+      // 3. Se a seção existir, rola suavemente até ela
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
