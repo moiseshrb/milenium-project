@@ -16,7 +16,7 @@
   padding: 30px;
 }
 
-.parceiros-scroll img {
+.parceiros-scroll img {  
   height: 35px;
   width: auto;
   filter: grayscale(100%) opacity(75%);
