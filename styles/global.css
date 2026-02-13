@@ -1,4 +1,17 @@
 /* Header */
+@import url('./extras/reset.css');
+@import url('./extras/colors.css');
+@import url('./extras/fonts.css');
+
+/* Importando as seções do site */
+@import url('./sections/navigation.css');
+@import url('./sections/main.css');
+@import url('./sections/section2.css');
+@import url('./sections/footer.css');
+
+/* IMPORTANTE: A responsividade deve ser a ÚLTIMA coisa a ser carregada */
+@import url('./extras/responsive.css');
+
 
 header {
   background-color: var(--bege);
