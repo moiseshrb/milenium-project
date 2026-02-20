@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milenium - Soluções em Painéis Elétricos</title>
+
+  <link rel="stylesheet" href="../styles/extras/colors.css">
+  <link rel="stylesheet" href="../styles/extras/fonts.css">
+  <link rel="stylesheet" href="../styles/extras/reset.css">
+  <link rel="stylesheet" href="../styles/sections/main.css">
+  <link rel="stylesheet" href="../styles/sections/section2.css">
+  <link rel="stylesheet" href="../styles/sections/navigation.css">
+  <link rel="stylesheet" href="../styles/sections/footer.css">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/extras/responsive.css">
+  
+  <link rel="shortcut icon" href="../assets/icons/LOGO (1).svg" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <img src="../assets/logos/logotipoMilenium.svg" alt="Logotipo da Milenium">
+    </nav>
+    
+    <div class="nav-superior">
+      <button class="menu-mobile" onclick="toggleMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#textos-1">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#faq">Fornecedores</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <main> 
+    
+  </main>
+
+  <footer id="contato">
+    <!-- Botão CTA no topo do footer -->
+    <button class="footer-cta">Solicite seu orçamento!</button>
+    
+    <div class="footer-content">
+      <!-- Logo da empresa -->
+      <div class="footer-logo">
+        <img src="../assets/logos/logotipoMilenium2.svg" alt="Milenium - Quadros Elétricos & Automação">
+      </div>
+
+      <!-- Container dos contatos -->
+      <div class="contatos-footer">
+        <div class="whatsapp">
+          <img src="../assets/icons/icon-whatsapp.svg" alt="WhatsApp">
+          <p><strong>55 (71) 99243-1251</strong> (Wallace Silva)</p>
+        </div>
+
+        <div class="whatsapp">
+          <img src="../assets/icons/icon-whatsapp.svg" alt="WhatsApp">
+          <p><strong>55 (71) 81168-5148</strong> (Deivison Santana)</p>
+        </div>
+        
+        <div class="email">
+          <img src="../assets/icons/icon-email.svg" alt="Email">
+          <p>engenharia@mileniumquadros.com.br</p>
+        </div>
+        
+        <div class="localizacao">
+          <img src="../assets/icons/icon-location.svg" alt="Localização">
+          <p>Estrada Bahia feira nº58 km 9, Pirajá</p>
+        </div>
+
+        <a href="https://www.instagram.com/mileniumquadros?igsh=c3Q0bzRodWplZTcw" target="_blank" class="instagram-logo">
+          <img src="../assets/icons/icon-instagram.svg" alt="Instagram Milenium">
+        </a>
+      </div>
+
+      
+
+      <!-- Direitos autorais -->
+      <div class="footer-direitos-autorais">
+        &copy; Millenium 2024. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // --- Função para o Menu Mobile ---
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+
+  // Fecha o menu mobile ao clicar em um link (para telas menores)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
+  });
+
+  // --- Função de Rolagem Suave para TODOS os links âncora ---
+  // Este novo código seleciona qualquer link que comece com '#'
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      // 1. Previne o comportamento padrão de "pular" para a âncora
+      e.preventDefault();
+
+      // 2. Pega o ID da seção de destino (ex: '#servicos')
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+
+      // 3. Se a seção existir, rola suavemente até ela
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
