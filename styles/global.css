@@ -44,3 +44,31 @@ header {
   transform: scale(0.98);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Verde do WhatsApp */
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Tamanho do seu ícone SVG local */
+.icone-whatsapp {
+    width: 35px;
+    height: 35px;
+}
+
+/* Efeito ao passar o mouse */
+.btn-whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #20b858;
+}
