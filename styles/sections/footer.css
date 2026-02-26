@@ -71,10 +71,38 @@ footer {
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--verde-escuro);
   text-align: left;
   min-height: 40px;
+}
+
+/* Transforma o link em uma caixa flexível */
+.instagram-logo {
+    display: flex !important; /* !important garante que nenhuma regra antiga do main.css atrapalhe */
+    flex-direction: row !important; /* Força a ficar lado a lado */
+    align-items: center !important; /* Centraliza verticalmente ícone e texto */
+    gap: 10px !important; /* Espaço entre ícone e texto */
+    text-decoration: none !important; /* Remove sublinhado */
+    width: max-content !important; /* Garante que a caixa só tenha o tamanho do texto, não a linha toda */
+    margin: 0 !important; /* Remove margens externas que podem atrapalhar */
+    
+}
+
+/* Garante que a imagem não distorça */
+.instagram-logo img {
+    width: 24px; /* Ajuste o tamanho do ícone se precisar */
+    height: auto;
+}
+
+/* Reseta o parágrafo especificamente DENTRO do link do Instagram */
+.instagram-logo p {
+    margin: 0 !important; /* Tira margens do parágrafo */
+    padding: 0 !important;
+    white-space: nowrap !important; /* Impede que o texto quebre linha se a tela for pequena */
+    color: var(--verde-escuro); /* Ajuste para a cor correta do seu footer */
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
 }
 
 .whatsapp img,

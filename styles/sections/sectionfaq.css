@@ -57,3 +57,53 @@
     font-weight: 700;
 }
 
+/* =========================================
+   ALINHAMENTO DO BANNER PRINCIPAL DO FAQ
+   ========================================= */
+
+/* Juntamos as duas classes (.textos e .textos-faq) para dar mais força a essa regra e anular o main.css */
+.textos.textos-faq {
+    left: auto; /* Isso anula o left: 5% do main.css */
+    right: 5%; /* Agora sim, empurramos para a direita */
+    top: 50%; /* Desce a caixa para o meio da tela */
+    transform: translateY(-50%); /* Centraliza a caixa perfeitamente na vertical */
+    max-width: 600px; /* Limita a largura para o texto quebrar em 4 linhas igual ao Figma */
+    align-items: flex-end; /* Como a caixa é um flexbox, isso empurra os itens para a direita */
+}
+
+/* Garante que o texto em si fique alinhado à direita dentro da caixa */
+.textos.textos-faq .textos-1 {
+    text-align: right;
+}
+
+.faq-content ul {
+    width: 100%;
+    max-width: 800px;
+    padding-left: 20px; /* Aproxima as bolinhas do texto, tirando aquele recuo gigante padrão */
+    margin-top: -10px; /* Puxa a lista um pouco para cima para ficar perto do parágrafo anterior */
+    margin-bottom: 24px;
+}
+
+/* Estiliza cada item da lista (os textos e as bolinhas) */
+.faq-content li {
+    font-family: 'Sora', sans-serif; /* Puxa a mesma fonte do texto */
+    color: #3B5A3F; /* Deixa o texto e a bolinha com o verde escuro */
+    font-size: 18px; 
+    line-height: 1.6;
+    margin-bottom: 8px; /* Dá um respiro entre um item e outro da lista */
+    list-style-type: disc; /* Transforma a bolinha redonda em um quadrado (igual ao Figma) */
+}
+
+/* Tira a margem do último item da lista para manter o alinhamento perfeito */
+.faq-content li:last-child {
+    margin-bottom: 0;
+}
+
+.camadaVerde.ajuste-raio {
+    /* 1. Dá um leve zoom na imagem (115% da tela) para criar "espaço de manobra" */
+    background-size: 115% auto !important; 
+    
+    /* 2. Agora sim, empurra ela para a direita. 
+       Pode ir testando: 80%, 100% ou até a palavra 'right' */
+    background-position: 10% center !important; 
+}
