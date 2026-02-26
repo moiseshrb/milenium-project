@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../../fonts/PTSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../../fonts/PTSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../fonts/Urbanist-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Informa ao CSS que essa fonte suporta qualquer peso de 100 a 900 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+.faq-content {
+    background-color: var(--bege);
+    padding: 80px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+.faq-content p {
+    font-family: 'Sora', sans-serif;
+    color: #3B5A3F; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    max-width: 800px; 
+    width: 100%;
+    margin-bottom: 24px; 
+}
+
+/* Remove a margem do último parágrafo para ficar alinhado certinho */
+.faq-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Deixa as tags <strong> com o peso correto da fonte */
+.faq-content p strong {
+    font-weight: 700;
+}
+
