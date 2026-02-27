@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="../styles/sections/section2.css">
   <link rel="stylesheet" href="../styles/sections/navigation.css">
   <link rel="stylesheet" href="../styles/sections/footer.css">
+  <link rel="stylesheet" href="../styles/sections/footerfaq.css">
   <link rel="stylesheet" href="../styles/layout.css">
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="../styles/extras/responsive.css">
   
-  <link rel="shortcut icon" href="../assets/icons/LOGO (1).svg" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/icons/favicon-milenium.svg" type="image/x-icon">
 </head>
 <body>
 
@@ -28,22 +29,85 @@
     <div class="nav-superior">
       <button class="menu-mobile" onclick="toggleMenu()">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#textos-1">Sobre</a>
+        <a href="index.html#textos-1">Sobre</a>
         <a href="#servicos">Serviços</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#faq">Fornecedores</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#faq">Fornecedores</a>
         <a href="#contato">Contato</a>
       </div>
     </div>
   </header>
 
   <main> 
-    
+    <a href="https://wa.me/5571992431251?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Milenium%20Quadros%20Elétricos." 
+       class="btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+       <img src="../assets/icons/icon-whatsapp2.svg" alt="Ícone do WhatsApp" class="icone-whatsapp">
+    </a>
+
+    <section class="servicos pagina-servicos" id="servicos">
+      
+      <h1 class="textoServico">Alguns Serviços</h1>
+      
+      <div class="grid-servicos listagem-completa">
+        
+        <div class="item-servico">
+          <h4>Painéis TTA / QTA</h4>
+          <p>Painéis testados e certificados para máxima segurança e continuidade energética.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>Quadro de Tomada</h4>
+          <p>Soluções tanto residenciais quanto industriais para distribuição segura de energia.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>Painéis Inversores</h4>
+          <p>Tecnologia avançada para conversão de energia eficaz.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>Quadro para Exaustores</h4>
+          <p>Especializados para operar sistemas de ventilação e exaustão eficientes.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>Banco de Capacitores</h4>
+          <p>Eficiência energética e redução de custos com correção do fator de potência.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>Quadro de força</h4>
+          <p>Distribuição de energia robusta e confiável para aplicações industriais.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>Conjunto de Medição</h4>
+          <p>Medição e monitoramento precisos para controle de consumo.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>QGBT (Quadro Geral de Baixa Tensão)</h4>
+          <p>Gerenciamento centralizado e seguro da distribuição elétrica em larga escala.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>Quadro de Bomba</h4>
+          <p>Sistemas dedicados para controle e proteção de bombas.</p>
+        </div>
+
+        <div class="item-servico">
+          <h4>CCM (Centro de Controle de Motores)</h4>
+          <p>Automação e controle confiável para operações industriais.</p>
+        </div>
+
+    </section>
   </main>
 
-  <footer id="contato">
+  <footer id="contato" class="footer footer-faq">
     <!-- Botão CTA no topo do footer -->
-    <button class="footer-cta">Solicite seu orçamento!</button>
+     <a href="https://wa.me/5571992431251?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Milenium%20Quadros%20Elétricos." target="_blank">
+        <button class="footer-cta">Solicite seu orçamento!</button>
+      </a>
     
     <div class="footer-content">
       <!-- Logo da empresa -->
@@ -68,33 +132,32 @@
           <p>engenharia@mileniumquadros.com.br</p>
         </div>
         
-        <div class="localizacao">
-          <img src="../assets/icons/icon-location.svg" alt="Localização">
-          <p>Estrada Bahia feira nº58 km 9, Pirajá</p>
-        </div>
-
         <a href="https://www.instagram.com/mileniumquadros?igsh=c3Q0bzRodWplZTcw" target="_blank" class="instagram-logo">
           <img src="../assets/icons/icon-instagram.svg" alt="Instagram Milenium">
+          <p>@mileniumquadros</p> 
         </a>
+
+        <div class="localizacao">
+          <img src="../assets/icons/icon-location.svg" alt="Localização">
+          <p> Rua Barão de Cotegipe - Calçada, Salvador - BA, 40301-155</p>
+        </div>
       </div>
 
       
 
       <!-- Direitos autorais -->
       <div class="footer-direitos-autorais">
-        &copy; Millenium 2024. Todos os direitos reservados.
+        &copy; Millenium 2026. Todos os direitos reservados.
       </div>
     </div>
   </footer>
 
   <script>
-  // --- Função para o Menu Mobile ---
   function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('active');
   }
 
-  // Fecha o menu mobile ao clicar em um link (para telas menores)
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       const navLinks = document.getElementById('navLinks');
@@ -104,18 +167,11 @@
     });
   });
 
-  // --- Função de Rolagem Suave para TODOS os links âncora ---
-  // Este novo código seleciona qualquer link que comece com '#'
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      // 1. Previne o comportamento padrão de "pular" para a âncora
       e.preventDefault();
-
-      // 2. Pega o ID da seção de destino (ex: '#servicos')
       const targetId = this.getAttribute('href');
       const targetSection = document.querySelector(targetId);
-
-      // 3. Se a seção existir, rola suavemente até ela
       if (targetSection) {
         targetSection.scrollIntoView({
           behavior: 'smooth',
@@ -124,7 +180,7 @@
       }
     });
   });
-</script>
+  </script>
 
 </body>
 </html>

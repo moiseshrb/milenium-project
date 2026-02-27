@@ -24,6 +24,16 @@
   background-repeat: no-repeat;
 }
 
+.camadaVerde.fundo-home {
+    /* Puxa o raio que você exportou da tela inicial */
+    background-image: url('../../assets/backgroundImages/camadaRaio1.png');
+    
+    /* Dependendo de como você exportou, talvez precise daquele "zoom" para alinhar certinho.
+       Se a imagem já encaixar perfeita, pode apagar essas duas linhas de baixo: */
+    background-size: 110% auto; 
+    background-position: center; 
+}
+
 .textos {
   position: absolute;
   z-index: 3;
@@ -55,6 +65,7 @@
   color: var(--verde-escuro);
   font-size: 24px;
   font-family: 'Sora';
+  box-shadow: 0 0 25px rgba(0, 40, 0, 0.5);
 }
 
 .servicos {
@@ -118,4 +129,87 @@
   margin-top: 6.25rem;
   font-family: 'Sora';
   font-weight: bold;
+}
+@media (max-width: 1024px) {
+    
+    /* Agrupamos todas as variações da camada verde */
+    .camadaVerde,
+    .camadaVerde.fundo-home,
+    .camadaVerde.ajuste-raio {
+        background-image: none !important; /* Remove os PNGs dos raios */
+        
+        /* Como o PNG vazado sumiu, precisamos de um fundo novo.
+           Aqui coloquei um degradê verde que começa sólido na esquerda (para o texto ler bem) 
+           e fica levemente transparente na direita (para a foto do eletricista aparecer um pouquinho no fundo). */
+        background: linear-gradient(to right, rgba(59, 90, 63, 1) 30%, rgba(59, 90, 63, 0.4) 100%) !important;
+        
+        /* Se você quiser que o gradiente tampe a foto 100%, use a linha de baixo e apague a de cima: */
+        /* background: linear-gradient(to right, var(--verde-escuro), var(--verde-claro)) !important; */
+    }
+
+    /* Ajuste extra para garantir que o texto não fique colado nas bordas no celular */
+    .textos, 
+    .textos.textos-faq {
+        max-width: 90% !important; /* Deixa o texto ocupar mais espaço na tela */
+        left: 5% !important; /* Centraliza melhor */
+        right: auto !important; /* Reseta o alinhamento do FAQ */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        align-items: flex-start !important;
+    }
+
+    .textos.textos-faq .textos-1 {
+        text-align: left !important; /* Volta o texto do FAQ para a esquerda no celular */
+    }
+}
+
+/* Espaçamento inicial da página para não colar no topo */
+.pagina-servicos {
+    padding-top: 100px; 
+    padding-bottom: 100px;
+}
+
+/* Alinha o quadrado com o título do serviço */
+.listagem-completa .item-servico h4 {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+}
+
+/* Desenha o quadradinho verde estilo lista */
+.listagem-completa .item-servico h4::before {
+    content: ""; 
+    display: inline-block;
+    width: 6px; 
+    height: 6px; 
+    background-color: var(--verde-escuro-2); /* Puxa o verde da sua paleta */
+}
+
+.pagina-servicos {
+    padding-top: 100px; 
+    padding-bottom: 100px;
+}
+
+/* Alinha a bolinha com o título do serviço */
+.listagem-completa .item-servico h4 {
+    display: flex;
+    align-items: center; 
+    gap: 8px; /* Dá um espacinho entre a bolinha e a primeira letra */
+}
+
+/* Desenha a bolinha verde antes do título */
+.listagem-completa .item-servico h4::before {
+    content: ""; 
+    display: inline-block;
+    width: 8px; /* Largura da bolinha */
+    height: 8px; /* Altura da bolinha */
+    background-color: var(--verde-escuro-2); /* A cor verde */
+    border-radius: 50%; /* ISSO AQUI FAZ O QUADRADO VIRAR UMA BOLINHA REDONDA! */
+}
+
+/* Centraliza o botão CTA no fim da página */
+.botao-container-servicos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
